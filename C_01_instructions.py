@@ -25,7 +25,7 @@ def string_checker(question, valid_ans=('yes', 'no')):
         print()
 
 
-
+# displays instructions
 def instructions():
     """Prints instructions"""
 
