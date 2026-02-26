@@ -1,5 +1,8 @@
 # Check that users have entered a valid
 # option based on a list
+import random
+
+
 def string_checker(question, valid_ans=('yes', 'no')):
 
     error = f"Please enter a valid option from the following list: {valid_ans}"
@@ -75,7 +78,7 @@ def int_check(question):
 mode = "regular"
 rounds_played = 0
 
-rps_list = ["Rock", "Paper", "Scissors", "xxx"]
+rps_list = ["rock", "paper", "scissors", "xxx"]
 
 
 
@@ -113,6 +116,10 @@ while rounds_played < num_rounds:
 
     if user_choice == "xxx":
         break
+
+    #randomly choose from the rps list (excluding the exit code)
+    comp_choice = random.choice(rps_list[:-1])
+
     rounds_played += 1
 
     # if users are in infinite mode, increase number of rounds!
